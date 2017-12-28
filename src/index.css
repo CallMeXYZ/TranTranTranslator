@@ -3,26 +3,103 @@
     min-width: 200px;
     max-width: 400px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     position: absolute;
     z-index: 1201;
     border-image: initial;
-    border: 1px solid rgb(187, 187, 187);
-    border-bottom-color: rgb(168, 168, 168);
+    border: 1px solid #BBBBBB;
+    border-bottom-color: #A8A8A8;
     padding: 16px;
     color: #252525;
     font-size: 14px;
     margin: 0;
 }
+
 .TranTranTranslator .main {
     font-size: 18px;
     margin: 5px auto;
 }
-.TranTranTranslator tr td{
+
+.TranTranTranslator .close {
+    height: 21px;
+    opacity: 0.4;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 21px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAYUlEQVQ4y2P4//8/A7Uxw6ihw8BQIDAAYn40MX6QOFmGQg38AMQnYAZDDTwBFTcgx1CYAf+htBwan59c7yMb/JMYA4mKKKgLfyIZLEdpRFHXpTQJU5rEPk3S6WjeHwGGAgB7bY/MvPH1YwAAAABJRU5ErkJggg==) no-repeat;
+    border: 1px solid transparent;
+    border-image: initial;
+    outline: 0px;
+}
+
+.TranTranTranslator .arrow-s, .TranTranTranslator .arrow-l {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.TranTranTranslator .arrow-s {
+    border: transparent solid 9px;
+
+}
+
+.TranTranTranslator .arrow-s.up {
+    top: -18px;
+    border-bottom: #fff solid 9px;
+
+}
+
+.TranTranTranslator .arrow-s.down {
+    bottom: -18px;
+    border-top: #fff solid 9px;
+}
+
+.TranTranTranslator .arrow-l {
+    border: transparent solid 10px;
+}
+
+.TranTranTranslator .arrow-l.up {
+    top: -20px;
+    border-bottom: #A8A8A8 solid 10px;
+}
+
+.TranTranTranslator .arrow-l.down {
+    bottom: -20px;
+    border-top: #A8A8A8 solid 10px;
+}
+
+.TranTranTranslator .arrow-s.left {
+    left: 11px
+}
+
+.TranTranTranslator .arrow-s.right {
+    right: 11px
+}
+
+.TranTranTranslator .arrow-s.center {
+    left: 91px
+}
+
+.TranTranTranslator .arrow-l.left {
+    left: 10px
+}
+
+.TranTranTranslator .arrow-l.right {
+    right: 10px
+}
+
+.TranTranTranslator .arrow-l.center {
+    left: 90px
+}
+
+
+.TranTranTranslator tr td {
     padding: 5px 10px 0 0;
     vertical-align: top;
 }
-.TranTranTranslator tr td:nth-child(1){
+
+.TranTranTranslator tr td:nth-child(1) {
     color: #636363;
     font-style: italic;
 }
