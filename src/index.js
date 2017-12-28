@@ -50,11 +50,13 @@ const show = () => {
         element.innerHTML = `
             <div class="main">${selectText}</div>
             <div class="main">${result}</div>
-            <table>
+            ${means.length > 0 ?
+            `<table>
                 <tbody>
-                     ${means.map(({type, means}) => `<tr><td>${type}</td><td>${means.slice(0, 3).join(', ')}</td></tr>`).join('')}
-                </tbody>
-            </table>
+                ${means.map(({type, means}) => `<tr><td>${type}</td><td>${means.slice(0, 3).join(', ')}</td></tr>`).join('')}
+                    </tbody>
+            </table>` : ''
+            }
 
         `
         data.showing = true
