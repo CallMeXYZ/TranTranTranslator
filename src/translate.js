@@ -9,17 +9,22 @@ export const baidu = (text) => fetch(`https://fanyi.baidu.com/v2transapi?from=en
     if (result) {
         result = result.split('.')[0]
     }
-    return {
-        result,
-        means: data.dict_result.simple_means ? data.dict_result.simple_means.symbols[0].parts.map(({part, part_name, means}) => {
-            const resultMeans = []
+    const means = []
+    try {
+        data.dict_result.simple_means.symbols[0].parts.map(({part, part_name, means: sourceMeans}) => {
+            const itemMeans = []
             // means item may have comma
-            means.forEach(item => {
+            sourceMeans.forEach(item => {
                 if (isString(item)) {
-                    resultMeans.push(...item.split(/,|，/))
+                    itemMeans.push(...item.split(/,|，/))
                 }
             })
-            return {type: (part || part_name || '').split('.')[0], means: resultMeans}
-        }) : []
+            if (itemMeans.length > 0) {
+                means.push({type: (part || part_name || '').split('.')[0], means: itemMeans})
+            }
+        })
+    } catch (e) {
+
     }
+    return {result, means}
 });
