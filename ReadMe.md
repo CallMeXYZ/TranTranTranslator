@@ -1,6 +1,6 @@
 # TranTranTranslator
 
-A chrome translator plugin which supports switching translate engine and
+A translator of chrome extension which supports switching translate engine and
 follows the official plugin's UI and ID
 
 ## Why
