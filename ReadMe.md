@@ -1,5 +1,12 @@
-# Todos
-- [X] hot reload
-- [X] position when selecting content of input
-- [X] internationalization
-- [X] multiple language
+# TranTranTranslator
+
+A chrome translator plugin which supports switching translate engine and
+follows the official plugin's UI and ID
+
+## Why
+
+The Official translator of chrome is concise and convenient. But it only
+supports google translate,which may be hard to access in some area
+(like China).
+
+
