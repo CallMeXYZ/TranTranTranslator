@@ -8,3 +8,4 @@ export const removeLastElementByClass = (className) => {
         }
     }
 }
+export const isString = val => typeof val === 'string'
